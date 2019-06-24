@@ -1,0 +1,28 @@
+<object-stream>
+  <list>
+    <Model.User>
+      <Fname>Michael</Fname>
+      <Lname>Barcoe</Lname>
+      <Username>Barcoe98</Username>
+      <Pword>123</Pword>
+      <Age>21</Age>
+      <Gender>male</Gender>
+    </Model.User>
+    <Model.User>
+      <Fname>Bob</Fname>
+      <Lname>foley</Lname>
+      <Username>foley</Username>
+      <Pword>foley</Pword>
+      <Age>21</Age>
+      <Gender>male</Gender>
+    </Model.User>
+    <Model.User>
+      <Fname>jane</Fname>
+      <Lname>ryan</Lname>
+      <Username>jane1</Username>
+      <Pword>jane1</Pword>
+      <Age>32</Age>
+      <Gender>female</Gender>
+    </Model.User>
+  </list>
+</object-stream>

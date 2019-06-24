@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.MainController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #228b22;">
+         <children>
+            <Label alignment="CENTER" prefHeight="81.0" prefWidth="300.0" style="-fx-background-color: #228b22;" text="ToyWorld">
+               <font>
+                  <Font name="System Italic" size="39.0" />
+               </font>
+            </Label>
+            <ImageView blendMode="DARKEN" fitHeight="214.0" fitWidth="199.0" layoutX="51.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/toy.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="178.0" layoutY="385.0" mnemonicParsing="false" onAction="#AddToCart" text="Add To Cart " />
+            <TextField fx:id="cartTxtName" layoutX="101.0" layoutY="251.0" />
+            <Label layoutX="35.0" layoutY="255.0" text="Name" />
+            <TextField fx:id="cartTxtCost" layoutX="101.0" layoutY="294.0" />
+            <Label layoutX="39.0" layoutY="298.0" text="Cost" />
+            <Label layoutX="36.0" layoutY="335.0" text="Quantity" />
+            <TextField fx:id="cartTxtQuantity" layoutX="101.0" layoutY="335.0" />
+            <Label fx:id="cartFeedBackLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="58.0" layoutY="434.0" prefHeight="37.0" prefWidth="161.0" textFill="RED">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="188.0" prefHeight="46.0" prefWidth="83.0" text="Cart">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="cartQuantityLabel" layoutX="167.0" layoutY="188.0" prefHeight="46.0" prefWidth="83.0" text="0">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Button layoutX="96.0" layoutY="385.0" mnemonicParsing="false" onAction="#displayCartToy" text="Display" />
+            <Button layoutX="21.0" layoutY="64.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="300.0" prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <TabPane prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Shop">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="toyTable" layoutX="24.0" layoutY="14.0" prefHeight="397.0" prefWidth="652.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="14.0">
+                                 <columns>
+                                    <TableColumn fx:id="colToyId" prefWidth="90.0" text="ToyId" />
+                                    <TableColumn fx:id="colName" prefWidth="88.0" text="Name" />
+                                    <TableColumn fx:id="colCost" prefWidth="62.0" text="Cost" />
+                                    <TableColumn fx:id="colWeight" prefWidth="73.0" text="Weight" />
+                                    <TableColumn fx:id="colCategory" prefWidth="96.0" text="Category" />
+                                    <TableColumn fx:id="colSubCategory" prefWidth="107.0" text="Sub-Category" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="My Cart ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="cartTable" layoutX="59.0" layoutY="40.0" prefHeight="338.0" prefWidth="466.0">
+                                <columns>
+                                  <TableColumn fx:id="cartName" prefWidth="184.0" text="Name" />
+                                  <TableColumn fx:id="cartQuantity" prefWidth="123.0" text="Quantity" />
+                                    <TableColumn fx:id="cartCost" minWidth="0.0" prefWidth="158.0" text="Cost" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="603.0" layoutY="396.0" mnemonicParsing="false" onAction="#CheckOutBtn" text="CheckOut" />
+                              <Label layoutX="90.0" layoutY="400.0" text="Total Cost:" />
+                              <Label fx:id="totalCostLabel" layoutX="163.0" layoutY="396.0" prefHeight="25.0" prefWidth="241.0" textFill="#ff0505" />
+                              <Button layoutX="471.0" layoutY="396.0" mnemonicParsing="false" onAction="#DeleteFromCart" text="Delete From Cart" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
