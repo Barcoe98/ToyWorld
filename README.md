@@ -10,11 +10,11 @@ there are two types of users
 1. Administractor
 2. Shopper
 
-## 1.Administrator
+### 1. Administrator
 * admin can create, read, update and delete any products that the shop sells
 * admin can few accounts made on there application
 
-## 2.Shopper
+### 2. Shopper
 * shoppers can add and delete items to there cart 
 * shoppers can chechout with there items
 * cart adds total price of cart 
